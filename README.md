@@ -28,7 +28,7 @@ Mettre en place un pipeline ETL pour traiter un fichier CSV contenant des inform
 - Optionnel : Dockerisation pour le déploiement.
 
 ## Prérequis
-- Python 3.x
+- Python 3.10
 - MongoDB
 - React 18
 - Docker 
