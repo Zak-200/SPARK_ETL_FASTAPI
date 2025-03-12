@@ -86,11 +86,3 @@ Bienvenue dans ce projet qui utilise **FastAPI** pour le backend et un frontend 
   "message": "Customer added successfully"
 }
 ```
-
-## Licence
-
-Ce projet est sous licence MIT. Libre à toi de le modifier et de le redistribuer !
-
----
-
-**Besoin d'améliorations ?** N'hésite pas à proposer des PRs ou à signaler un problème !
