@@ -100,3 +100,13 @@ def delete_customer(customer_id: str):
         raise HTTPException(status_code=404, detail="Client non trouvé")
 
     return {"message": "Client supprimé avec succès"}
+
+
+# 🔹 6. GET /countries → Récupérer la liste des pays uniques des clients
+@router.get("/countries", response_model=List[str])
+def get_countries():
+    """
+    Récupère la liste des pays uniques des clients stockés dans la base de données.
+    """
+    countries = collection.distinct("country")  # Récupère les pays uniques
+    return [country for country in countries if country]  # Filtre les valeurs nulles

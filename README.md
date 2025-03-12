@@ -1,34 +1,96 @@
-# README - Pipeline ETL & API FastAPI avec ReactJS
+# Gestion des Clients avec FastAPI et Frontend
 
-## Objectif
-Mettre en place un pipeline ETL pour traiter un fichier CSV contenant des informations clients, stocker ces données dans MongoDB et exposer ces informations via une API FastAPI. L'interface ReactJS permettra de visualiser les données sous forme de tableau et de graphiques interactifs, ainsi que d'effectuer des opérations CRUD.
+Bienvenue dans ce projet qui utilise **FastAPI** pour le backend et un frontend développé en **React**.
 
-## Planning de Développement
+## Fonctionnalités
 
-### Mise en place du pipeline ETL
-- Installation et configuration de l'environnement (Python, MongoDB, Airflow).
-- Lecture et extraction des données depuis le fichier CSV.
-- Transformation des données (nettoyage, jointure, agrégation).
-- Chargement des données dans MongoDB.
+- CRUD des clients (Créer, Lire, Mettre à jour, Supprimer)
+- API rapide et performante avec **FastAPI**
+- Interface utilisateur moderne en **React**
+- Connexion avec une base de données
+- CORS activé pour permettre la communication frontend-backend
 
-### Développement de l'API FastAPI
-- Création de l'API FastAPI avec les endpoints `GET`, `POST`, `PUT`, `DELETE`.
-- Implémentation de la logique de filtrage et de recherche (par pays, entreprise).
-- Tests de l'API et gestion des erreurs.
+## Installation et Configuration
 
-### Développement de l'interface ReactJS
-- Mise en place de l'application React et affichage des données sous forme de tableau dynamique.
-- Création des graphiques interactifs (Chart.js/Recharts) pour le dashboard.
-- Implémentation du formulaire CRUD (ajouter, modifier, supprimer un client).
+### Prérequis
 
-### Finalisation et Tests
-- Tests d'intégration entre le front-end, l'API et la base de données MongoDB.
-- Déploiement local de l'application.
-- Documentation et amélioration de l'interface utilisateur.
-- Optionnel : Dockerisation pour le déploiement.
+- **Python 3.9+**
+- **Node.js 16+** 
+- **Git**
 
-## Prérequis
-- Python 3.10
-- MongoDB
-- React 18
-- Docker 
+### Installation du Backend (FastAPI)
+
+1. Clone le repo :
+   ```sh
+   git clone https://github.com/ton-utilisateur/ton-repo.git
+   cd ton-repo
+   ```
+2. Crée un environnement virtuel et active-le :
+   ```sh
+   python -m venv env
+   source env/bin/activate  # Sur Mac/Linux
+   env\Scripts\activate     # Sur Windows
+   ```
+3. Installe les dépendances :
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Lance le serveur FastAPI :
+   ```sh
+   uvicorn main:app --reload
+   ```
+5. Accède à l'API sur `http://127.0.0.1:8000`
+6. Documentation interactive Swagger : `http://127.0.0.1:8000/docs`
+
+### Installation du Frontend
+
+
+1. Va dans le dossier du frontend :
+   ```sh
+   cd frontend
+   ```
+2. Installe les dépendances :
+   ```sh
+   npm install
+   ```
+3. Lance l'application :
+   ```sh
+   npm start  # Pour React
+   ```
+
+## Aperçu du Frontend
+
+![Description](Screenshot%202025-03-12%20100611.png)
+
+![Description](Screenshot%202025-03-12%20100635.png)
+## Exemples d'utilisation de l'API
+
+### Création d'un client (POST)
+
+#### Requête :
+
+```json
+{
+  "customer_id": "AZEFG",
+  "full_name": "Zakaria Ghanim",
+  "company": "VDE",
+  "country": "France",
+  "city": "SEVRAN"
+}
+```
+
+#### Réponse :
+
+```json
+{
+  "message": "Customer added successfully"
+}
+```
+
+## Licence
+
+Ce projet est sous licence MIT. Libre à toi de le modifier et de le redistribuer !
+
+---
+
+**Besoin d'améliorations ?** N'hésite pas à proposer des PRs ou à signaler un problème !

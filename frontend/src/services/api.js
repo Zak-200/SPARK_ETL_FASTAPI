@@ -51,3 +51,13 @@ export const deleteCustomer = async (id) => {
         throw error;
     }
 };
+
+export const fetchCountries = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/countries`);
+        return response.data;
+    } catch (error) {
+        console.error("Erreur lors du chargement des pays :", error);
+        throw error;
+    }
+};
